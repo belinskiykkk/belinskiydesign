@@ -99,3 +99,8 @@ h3 {
   background: #1c1c1e;
   color: #fff;
 }
+
+.new-titles {
+  font-weight: 500;
+  font-size: 16px;
+}

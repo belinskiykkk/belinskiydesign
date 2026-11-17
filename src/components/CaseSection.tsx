@@ -21,7 +21,7 @@ function FadeIn({ children, className }: { children: React.ReactNode; className?
 function BulletList({ label, items }: { label: string; items: string[] }) {
   return (
     <div>
-      <p className="mb-2.5 text-sm text-ink-soft">{label}</p>
+      <p className="mb-2.5 new-titles text-ink-soft">{label}</p>
       <ul className="space-y-2.5">
         {items.map((item, i) => (
           <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-soft">
@@ -37,7 +37,7 @@ function BulletList({ label, items }: { label: string; items: string[] }) {
 function ResultList({ items }: { items: string[] }) {
   return (
     <div>
-      <p className="mb-2.5 text-sm text-ink-soft">Результат:</p>
+      <p className="mb-2.5 new-titles text-ink-soft">Результат:</p>
       <ul className="space-y-2.5">
         {items.map((item, i) => (
           <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-ink-soft">
@@ -117,6 +117,7 @@ function BlockBody({ block, showTitle = true }: { block: CaseBlock; showTitle?: 
         </div>
       )}
       {block.problems && <BulletList label="Проблемы до внедрения:" items={block.problems} />}
+      {block.research && <BulletList label="Исследование и анализ:" items={block.research} />}
       {block.solutions && <BulletList label="Решение:" items={block.solutions} />}
       {block.results && <ResultList items={block.results} />}
       {block.figures.length > 0 && <FigureGrid figures={block.figures} />}

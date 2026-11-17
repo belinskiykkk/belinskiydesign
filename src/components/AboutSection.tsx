@@ -50,28 +50,6 @@ export default function AboutSection() {
           </m.div>
         ))}
       </div>
-
-      <m.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-40px' }}
-        transition={{ duration: 0.55, ease: 'easeOut' }}
-        className="mt-10"
-      >
-        <h3 className="mb-4 text-lg font-normal tracking-tight">Мои рабочие инструменты</h3>
-        <div className="flex flex-wrap gap-2.5">
-          {about.tools.map((t) => (
-            <img
-              key={t.name}
-              src={encodeURI(import.meta.env.BASE_URL + t.src)}
-              alt={t.name}
-              title={t.name}
-              loading="lazy"
-              className="size-11 rounded-xl transition-transform hover:-translate-y-0.5"
-            />
-          ))}
-        </div>
-      </m.div>
     </section>
   )
 }

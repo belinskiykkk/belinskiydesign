@@ -1,5 +1,6 @@
 import pfmFlow1 from './assets/pfm-flow-1.webp'
 import pfmFlow2 from './assets/pfm-flow-2.webp'
+import pfmFlow3 from './assets/pfm-flow-3.png'
 import itkComponent from './assets/itk-component.webp'
 import itkDatepicker from './assets/itk-datepicker.webp'
 import loan1 from './assets/loan-1.webp'
@@ -30,6 +31,7 @@ export interface CaseBlock {
   problems?: string[]
   solutions?: string[]
   results?: string[]
+  research?: string[]
   figures: Figure[]
 }
 
@@ -46,8 +48,8 @@ export interface CaseStudy {
 export const cases: CaseStudy[] = [
   {
     id: 'ama',
-    navLabel: 'АМА',
-    title: 'АМА',
+    navLabel: 'АМА Консьерж',
+    title: 'АМА Консьерж',
     tags: ['B2B', 'B2C'],
     description:
       '«АМА» — это интеллектуальный консьерж-сервис премиум-класса, созданный для клиентов private banking.',
@@ -60,9 +62,14 @@ export const cases: CaseStudy[] = [
           'Не был сформирован пользовательский путь от просмотра монет до оформления заказа, а также не были предусмотрены статусы заказа и взаимодействие с партнёром, который должен был его подтверждать;',
           'Отсутствовала единая компонентная библиотека.',
         ],
+        research: [
+          "Изучил продуктовую и бизнес-модель, а также технические регламенты обработки заказов на стороне бэкенда и внешних партнеров;",
+          "Провел серию интервью с пользователями и сформулировал ключевую JTBD: “Когда я покупаю актив онлайн, я хочу на каждом этапе видеть корректность всех параметров и актуальный статус сделки, чтобы быть уверенным в сохранности средств и не тратить время на возвраты или звонки в поддержку;",
+          "Совместно с CPO построил CJM, внедрил профили пользователей  и зафиксировал продуктовые ограничения;"
+        ],
         solutions: [
-          'Спроектировали биржу монет и end-to-end сценарий от детальной страницы до оформления заказа;',
-          'Добавили сценарий покупки монет и статусы заказа на разных этапах, учитывая взаимодействие с маркетплейсом: оформление заказа → апрув от партнёра → получение пользователем актуального статуса;',
+          'Спроектировал биржу монет и end-to-end сценарий от детальной страницы до оформления заказа;',
+          'Добавил сценарий покупки монет и статусы заказа на разных этапах, учитывая взаимодействие с маркетплейсом: Оформление заказа → апрув от партнера → получение пользователем актуального статуса;',
           'Создал компонентную библиотеку с учётом масштабирования продукта.',
         ],
         results: [
@@ -84,6 +91,13 @@ export const cases: CaseStudy[] = [
             height: 1470,
             wide: true,
           },
+          {
+            src: pfmFlow3,
+            caption: 'User Flow сценария покупки монет',
+            width: 906,
+            height: 582,
+            wide: true,
+          }
         ],
       },
     ],
@@ -252,13 +266,7 @@ export const about = {
     'Постоянно изучаю современные продуктовые практики и крупные дизайн-системы, участвую в профессиональных митапах. В свободное время занимаюсь музыкой и графическим дизайном.',
   ],
   tools: [
-    { name: 'Figma', src: 'Logo/Figma.svg' },
-    { name: 'Premiere Pro', src: 'Logo/Adobe Premier Pro.svg' },
-    { name: 'After Effects', src: 'Logo/Adobe After Effects.svg' },
-    { name: 'Photoshop', src: 'Logo/Adobe Photshop.svg' },
-    { name: 'Miro', src: 'Logo/Miro.svg' },
-    { name: 'Trello', src: 'Logo/Trello.svg' },
-    { name: 'Teams', src: 'Social Media/Teams.svg' },
+
   ],
 }
 
