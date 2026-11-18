@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 interface Props {
   src: string
-  alt: string
+  alt?: string
   width: number
   height: number
   eager?: boolean

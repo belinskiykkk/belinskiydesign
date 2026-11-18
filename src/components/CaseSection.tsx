@@ -70,9 +70,9 @@ function FigureGrid({ figures }: { figures: Figure[] }) {
         <FadeIn key={f.src}>
           <figure>
             <div className="border-line overflow-hidden rounded-2xl border bg-white">
-              <SmartImage src={f.src} alt={f.caption} width={f.width} height={f.height} />
+              <SmartImage src={f.src} alt={f?.caption} width={f.width} height={f.height} />
             </div>
-            <figcaption className="mt-2.5 text-center text-xs text-ink-soft">{f.caption}</figcaption>
+            <figcaption className="mt-2.5 text-center text-xs text-ink-soft">{f?.caption}</figcaption>
           </figure>
         </FadeIn>
       ))}

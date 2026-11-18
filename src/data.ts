@@ -19,7 +19,7 @@ import crm1 from './assets/crm-1.png'
 
 export interface Figure {
   src: string
-  caption: string
+  caption?: string
   width: number
   height: number
   wide?: boolean
