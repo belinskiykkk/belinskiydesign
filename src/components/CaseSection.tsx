@@ -180,7 +180,7 @@ export default function CaseSection({ study }: { study: CaseStudy }) {
     <section id={study.id} className="scroll-mt-10">
       <FadeIn className="space-y-4">
         <div className="flex gap-2">
-          {study.tags.map((t) => (
+          {study.tags?.map((t) => (
             <Chip key={t}>{t}</Chip>
           ))}
         </div>
@@ -191,7 +191,7 @@ export default function CaseSection({ study }: { study: CaseStudy }) {
             Продукты, над которыми работал:
           </h3>
           <div className="flex flex-wrap gap-2">
-            {study.products.map((p) => (
+            {study.products?.map((p) => (
               <Chip key={p}>{p}</Chip>
             ))}
           </div>
